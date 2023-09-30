@@ -1,0 +1,82 @@
+@import '@resources';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    padding-left: 5%;
+    text-align: start;
+
+    & h3 {
+        @include font-size(24px);
+    }
+
+    & p {
+        @include font-size(20px);
+    }
+}
+
+@include mq($tablet) {
+    .container {
+        @include font-size(16px);
+
+        line-height: 150%;
+    }
+
+    .container h3 {
+        @include font-size(18px);
+
+        line-height: 150%;
+    }
+
+    .container p {
+        @include font-size(16px);
+
+        line-height: 150%;
+    }
+}
+
+.title {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: rem(16);
+    margin: 0;
+    padding: 0;
+
+    @include font-size(24px);
+
+    @include mq($tablet) {
+        @include font-size(20px);
+    }
+}
+
+.subtitle {
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    font-weight: 700;
+
+    @include font-size(20px);
+
+    @include mq($tablet) {
+        @include font-size(18px);
+
+        padding: rem(20) 0;
+        text-decoration: underline;
+    }
+}
+
+.list {
+    line-height: 150%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+
+    @include font-size(20px);
+
+    @include mq($tablet) {
+        @include font-size(16px);
+
+        padding: rem(20) 0;
+    }
+}

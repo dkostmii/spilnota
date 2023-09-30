@@ -1,0 +1,103 @@
+@import '@resources';
+
+.body {
+    background-image: url("@img/MainBg.png");
+    background-position: center bottom;
+    background-size: rem(1440) rem(764);
+    height: rem(764);
+
+    @include mq($desktop, '>') {
+        background-image: url("@img/MainBgLarge.png");
+        background-size: rem(1920) rem(811);
+        height: rem(811);
+    }
+}
+
+.content {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+    gap: rem(55);
+
+    @include mq($laptop) {
+        gap: rem(79);
+    }
+
+    @include mq($tablet) {
+        gap: rem(58);
+    }
+}
+
+.heading {
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $white;
+    gap: rem(18);
+
+    @include mq($laptop) {
+        gap: rem(37);
+    }
+
+    @include mq($tablet) {
+        gap: rem(23);
+    }
+}
+
+.title {
+    text-align: left;
+    font-weight: 800;
+    line-height: 132%;
+
+    @include font-size(53px);
+
+    @include mq($tablet) {
+        @include font-size(43px);
+    }
+}
+
+.subtitle {
+    text-align: start;
+    line-height: 134%;
+    width: rem(356);
+
+    @include font-size(28px);
+
+    @include mq($tablet) {
+        @include font-size(32px);
+
+        max-width: rem(458);
+    }
+
+    @include mq($mobile) {
+        @include font-size(24px);
+
+        width: 100%;
+    }
+}
+
+.main-button {
+    width: rem(270);
+    height: rem(65);
+    padding: 0;
+
+    @include font-size(24px);
+
+    @include mq($laptop) {
+        width: rem(290);
+        height: rem(77);
+
+        @include font-size(22px);
+    }
+
+    @include mq($tablet) {
+        width: rem(257);
+        height: rem(65);
+
+        @include font-size(20px);
+    }
+}

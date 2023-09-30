@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Кредитна карта",
+    "items": [
+      {
+        "title": "Платіжна карта",
+        "url": "https://www.liqpay.ua/uk/checkout/card/i82399335823"
+      },
+      {
+        "title": "Карта від Монобанк",
+        "url": "https://www.liqpay.ua/uk/checkout/card/i82399335823"
+      }
+    ]
+  },
+  {
+    "title": "Банківський рахунок",
+    "items": [
+      {
+        "title": "UAH / українська гривня",
+        "url": "https://www.liqpay.ua/uk/checkout/card/i82399335823"
+      },
+      {
+        "title": "USD / долар США",
+        "url": "https://www.liqpay.ua/uk/checkout/card/i82399335823"
+      },
+      {
+        "title": "EUR / Євро",
+        "url": "https://www.liqpay.ua/uk/checkout/card/i82399335823"
+      },
+      {
+        "title": "PLN / Польський злотий",
+        "url": "https://www.liqpay.ua/uk/checkout/card/i82399335823"
+      },
+      {
+        "title": "GBP / Фунт стерлінгів",
+        "url": "https://www.liqpay.ua/uk/checkout/card/i82399335823"
+      }
+    ]
+  },
+  {
+    "title": "Криптовалюта",
+    "url": "https://www.liqpay.ua/uk/checkout/card/i82399335823"
+  },
+  {
+    "title": "Patreon",
+    "url": "https://www.patreon.com/ridni"
+  }
+]

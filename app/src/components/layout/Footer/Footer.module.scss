@@ -1,0 +1,138 @@
+@import '@resources';
+
+.wrapper {
+    background-image: url("@img/FooterBg.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: rem(48);
+
+    @include mq($desktop, '>') {
+        background-image: url("@img/FooterBgLarge.svg");
+        padding-top: rem(64);
+    }
+
+    @include mq($laptop) {
+        background-image: url("@img/FooterBgTablet.svg");
+    }
+
+    @include mq($tablet) {
+        background-image: url("@img/FooterBgMobile.svg");
+    }
+
+    &.invert {
+        background-image: url("@img/FooterBgLight.svg");
+
+        @include mq($desktop, '>') {
+            background-image: url("@img/FooterBgLargeLight.svg");
+            padding-top: rem(64);
+        }
+
+        @include mq($laptop) {
+            background-image: url("@img/FooterBgTabletLight.svg");
+        }
+
+        @include mq($tablet) {
+            background-image: url("@img/FooterBgMobileLight.svg");
+        }
+    }
+}
+
+.container {
+    padding: 5%;
+    padding-bottom: rem(121);
+    display: flex;
+    align-items: stretch;
+    gap: rem(89);
+    background-color: $accent;
+
+    @include mq($laptop, '>') {
+        justify-content: space-between;
+    }
+
+    @include mq($laptop) {
+        flex-direction: column;
+        padding-bottom: rem(72);
+    }
+
+    @include mq($tablet) {
+        padding-bottom: rem(96);
+    }
+
+    &.invert {
+        background-color: $variant;
+    }
+}
+
+.content {
+    justify-content: space-between;
+    display: flex;
+    gap: rem(48);
+    flex: 1 1 100%;
+
+    @include mq($tablet, '<>', $laptop) {
+        & > * {
+            flex: 1 1 100%;
+        }
+    }
+
+    @include mq($tablet) {
+        flex-wrap: wrap;
+    }
+
+
+    @include mq($desktop, '>') {
+        justify-content: flex-start;
+        gap: rem(180);
+    }
+
+    @include mq($mobile) {
+        flex-direction: column;
+    }
+
+    &_navigation, &_contacts, &_social {
+        &.invert {
+            color: $accent;
+        }
+    }
+
+    &_navigation {
+        order: 0;
+
+        @include mq($tablet) {
+            order: 2;
+        }
+    }
+
+    &_contacts {
+        order: 1;
+
+        @include mq($tablet) {
+            order: 0;
+        }
+    }
+
+    &_social {
+        order: 2;
+
+        @include mq($tablet) {
+            order: 1;
+        }
+    }
+}
+
+.navigation-list {
+    font-weight: 500;
+    gap: rem(30);
+
+    @include font-size(24px);
+
+    @include mq($laptop) {
+        @include font-size(20px);
+    }
+
+    @include mq($tablet) {
+        @include font-size(18px);
+
+        gap: rem(20);
+    }
+}

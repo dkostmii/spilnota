@@ -1,0 +1,80 @@
+@import '@resources';
+
+.layout {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: $variant;
+    border-radius: 0 rem(20) rem(20) 0;
+
+    @include mq($tablet) {
+        border-radius: 0;
+        justify-content: flex-start;
+    }
+}
+
+.container {
+    color: $accent;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    padding: rem(48) rem(62) rem(48) rem(60);
+
+    @include mq($tablet) {
+        padding: rem(40) 10%;
+        width: 100%;
+    }
+
+    @include mq($phablet) {
+        padding: rem(40) rem(20);
+    }
+
+    @include font-size(20px);
+}
+
+.title {
+    @include font-size(24px);
+
+    font-weight: 600;
+    line-height: 150%;
+
+    @include mq($laptop) {
+        @include font-size(20px);
+    }
+}
+
+.lines {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+
+    & > * {
+        @include font-size(20px);
+
+        line-height: 150%;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    @include mq($laptop) {
+        & > * {
+            @include font-size(18px);
+        }
+    }
+}
+
+.input {
+    @include font-size(20px);
+
+    background-color: $accent;
+    color: $white;
+    padding: 0;
+    margin: 0;
+    border: none;
+}

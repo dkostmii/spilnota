@@ -1,0 +1,61 @@
+@import '@resources';
+
+.button {
+    background-color: $variant;
+    border-radius: rem(10);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rem(1) rem(4) rem(14) rem(1) rgba($accent, 0.1);
+    gap: rem(6);
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+
+    @include font-size(18px);
+
+    min-width: rem(168);
+    height: rem(65);
+    padding: 0 rem(16);
+    color: $accent;
+
+    &::after {
+        content: "";
+        width: rem(25);
+        height: rem(25);
+        background-size: rem(25);
+        background-image: url("@img/HeartLight.svg");
+    }
+
+    @include mq($tablet) {
+        min-width: rem(153);
+
+        @include font-size(16px);
+
+        &::after {
+            width: rem(21);
+            height: rem(21);
+            background-size: rem(21);
+        }
+    }
+
+    @include button-transition;
+
+    &:hover {
+        transform: scale(104%);
+        filter: brightness(105%);
+
+        &::after {
+            transform: scale(108%);
+        }
+    }
+
+    &:active, &:target {
+        background-color: $accent;
+        color: $variant;
+
+        &::after {
+            background-image: url("@img/Heart.svg");
+        }
+    }
+}

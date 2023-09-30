@@ -1,0 +1,14 @@
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_1_6" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="38" height="38">
+<rect x="38" y="38" width="38" height="38" transform="rotate(-180 38 38)" fill="url(#pattern0)"/>
+</mask>
+<g mask="url(#mask0_1_6)">
+<rect x="38" y="38" width="38" height="38" transform="rotate(-180 38 38)" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_6" transform="scale(0.00195312)"/>
+</pattern>
+<image id="image0_1_6" width="512" height="512" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAAgMAAACJFjxpAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAABGHAAARhwFBX2J1AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAAlQTFRF////AAAAAAAAflGpXQAAAAJ0Uk5TAICbK04YAAAEbElEQVR42u3aya0jMQyEYerCIBTNi+dFoyB40UQ5F8Pw0osWkgXM1B9BHT64uyWLMMYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4wxxhhj7L/v9w+0LhU7wESxA5oU7IAfMIIugkVgIlgETQSL4Af8S9BFsAhMBIugiWAR/IAfB/3xPKpYAkAE7TGggAnAEPTnS0nFEoAhaM8BBUwAhKC/vJlWLAEQgvYyoIAJQBD0t8+TiiUAQdDeBhQwAQCC/vGNWrEEAAjax4ACJpCOoH8dVFQsgXQE7WtAARNIRtAPTqsqlkAygnYwoIAJpCLoh0eWFUsgFUE7HFDABBIR9JNz64olkIignQwoYAJpCPrp5UXFEkhD0E4HFDCBJAT94garYgkkIWgXAwqYQAqCfnmNWbEEUhC0ywEFTCABQb+5y65YAgkI2s2AAiYQjqDf/qGhYgmEI2i3AwqYQDCCewLBCGxggGIJBCMYIBCKYIRAKAIbGqBYAqEIhggEIhgjEIjABgcolkAggkECYQhGCYQhsOEBiiUQhmCYQBCCcQJBCGxigGIJBCGYIBCCYIZACAKbGqBYAiEIpggEIJgjEIDAJgcolkAAgkkC7ghmCbgjsOkBiiXgjmCagDOCeQLOCGxhgGIJOCNYIOCKYIWAKwJbGqBYAq4Ilgg4Ilgj4IjAFgcoloAjgkUCbghWCbghsOUBiiXghmCZgBOCdQJOCGxjgGIJOCHYIOCCYIeACwLbGqBYAi4Itgg4INgj4IDANgcoloADgk0C2wh2CWwjsO0BiiWwjWCbwCaCfQKbCMxhgGIJbCJwILCFwIPAFgJzGaBYAlsIXAhsIPAhsIHAnAYolsAGAicCywi8CCwjMLcBiiWwjMCNwCICPwKLCMxxgGIJLCJwJLCEwJPAEgJzHaBYAksIXAksIPAlsIDAnAcolsACAmcC0wi8CUwjMPcBiiUwjcCdwCQCfwKTCCxggGIJTCIIIDCFIILAFAILGaBYAlMIQghMIIghMIHAggYolsAEgiACwwiiCAwjsLABiiUwjCCMwCCCOAKDCCxwgGIJDCIIJDCEIJLAEAILHaBYAkMIQgkMIIglMIDAggcolsAAgmACtwiiCdwisPABiiVwiyCcwA2CeAI3CCxhgGIJ3CBIIHCJIIPAJQJLGaBYApcIUghcIMghcIHAkgYolsAFgiQCpwiyCJwisLQBiiVwiiCNwAmCPAInCCxxgGIJnCBIJHCIIJPAIQJLHaBYAocIUgkcIMglcIDAkgcolsABgmQCXwiyCXwhsPQBiiXwhSCdwAeCfAIfCAwwQLEEPhAACLwhQBB4Q2CQAYol8IYAQuAFAYbACwIDDVAsgRcEIAJPBCgCTwQGG6BYAk8EMAIPBDgCDwQGHKBYAg8EQAIiv1gCIhVLQESxBEQKmIDIL5aASDXwAG3gAQVMgDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY/9AfwFl5IJ3vCCsmQAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>

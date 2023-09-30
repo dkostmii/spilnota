@@ -1,0 +1,15 @@
+@import '@resources';
+
+.slide {
+    &_inner {
+        display: flex;
+        gap: rem(88);
+        justify-content: space-around;
+    }
+}
+
+.carousel {
+    @include mq($desktop, '>') {
+        padding: 0 5%;
+    }
+}

@@ -1,0 +1,106 @@
+@import '@resources';
+
+.btn-menu {
+    background-color: transparent;
+    border: none;
+    width: rem(50);
+    height: rem(50);
+
+    & > * {
+        width: inherit;
+        height: inherit;
+    }
+
+    @include mq($tablet) {
+        width: rem(40);
+        height: rem(40);
+    }
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: rem(24);
+
+    @include mq($desktop, '>') {
+        gap: rem(120);
+    }
+
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 100;
+    padding: 3% 8% 1%;
+    background-color: rgba($accent, 0);
+    color: rgba($white, 0.95);
+    transition: all 150ms ease-in;
+
+    @include mq($laptop) {
+        padding: rem(60);
+    }
+
+    @include mq($mobile) {
+        padding: rem(78) rem(20);
+    }
+
+    & button {
+        margin: 0;
+        padding: 0;
+    }
+
+    &.scroll {
+        position: fixed;
+        max-width: 100vw;
+    }
+
+    &.light {
+        background-color: rgba($white, 0.95);
+        color: $accent;
+    }
+
+    &.tint {
+        background-color: $variant;
+    }
+}
+
+.scroll {
+    box-shadow: 0 rem(4) rem(10) 0 rgba($accent, 0.1);
+}
+
+.social-wrapper {
+    width: 100%;
+    padding-top: rem(85);
+
+    @include mq($tablet) {
+        padding-top: rem(50);
+    }
+}
+
+@include mq($laptop) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.link {
+    @include button-transition;
+
+    &:hover {
+        opacity: .75;
+        transform: scale(108%);
+    }
+}
+
+.return-btn {
+    &_wrapper {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 100%;
+        display: flex;
+    }
+}

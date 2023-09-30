@@ -1,0 +1,14 @@
+@import '@resources';
+
+.anchor {
+    position: absolute;
+    top: rem(-150);
+
+    @include mq($tablet) {
+        top: rem(-250);
+    }
+
+    &_wrapper {
+        position: relative;
+    }
+}

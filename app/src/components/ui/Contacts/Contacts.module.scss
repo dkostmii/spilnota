@@ -1,0 +1,90 @@
+@import '@resources';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+}
+
+.title {
+    @include font-size(24px);
+
+    @include mq($laptop) {
+        @include font-size(20px);
+    }
+
+    @include mq($tablet) {
+        @include font-size(16px);
+    }
+
+    line-height: 125%;
+    color: $white;
+
+    &.invert {
+        color: $accent;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    list-style: none;
+
+    &.invert, &.invert * {
+        color: $accent;
+    }
+
+    &:not(.compact) {
+        align-items: stretch;
+    }
+
+    &.compact {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.item, .link {
+    display: flex;
+    gap: rem(20);
+}
+
+.icon {
+    width: rem(35);
+    height: rem(35);
+
+    @include mq($laptop) {
+        width: rem(28.6);
+        height: rem(28.6);
+    }
+
+    @include mq($tablet) {
+        width: rem(23);
+        height: rem(23);
+    }
+}
+
+.compact .icon {
+    width: rem(50);
+    height: rem(50);
+
+    @include mq($tablet) {
+        width: rem(35);
+        height: rem(35);
+    }
+}
+
+.caption {
+    @include font-size(24px);
+
+    @include mq($laptop) {
+        @include font-size(20px);
+    }
+
+    @include mq($tablet) {
+        @include font-size(16px);
+    }
+
+    line-height: 150%;
+}

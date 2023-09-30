@@ -1,0 +1,47 @@
+@import '@resources';
+
+.button {
+    color: $accent;
+
+    @include font-size(18px);
+
+    font-weight: 600;
+    padding: 0;
+
+    &, &:hover, &:active {
+        text-decoration: none;
+    }
+
+    &::after {
+        content: "";
+        background-image: url("@img/ArrowBackLight.svg");
+        width: rem(50);
+        height: rem(50);
+        background-size: cover;
+
+        @include mq($tablet, '>') {
+            transform: rotate(180deg);
+        }
+
+        @include mq($tablet) {
+            width: rem(40);
+            height: rem(40);
+        }
+    }
+
+    &:hover {
+        transform: scale(104%);
+        opacity: .75;
+
+        &::after {
+            transform: scale(108%);
+
+            @include mq($laptop, '>') {
+                transform: rotate(180deg) scale(108%);
+            }
+        }
+    }
+
+    display: flex;
+    gap: rem(20);
+}

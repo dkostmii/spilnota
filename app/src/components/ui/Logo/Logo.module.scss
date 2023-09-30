@@ -1,0 +1,10 @@
+@import '@resources';
+
+.logo {
+    width: rem(121);
+    height: auto;
+
+    @include mq($tablet) {
+        width: rem(95);
+    }
+}

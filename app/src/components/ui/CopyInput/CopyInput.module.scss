@@ -1,0 +1,26 @@
+@import '@resources';
+
+.container .input {
+    @include font-size(20px);
+
+    &, &:focus, &:active {
+        background-color: $accent;
+        color: $white;
+        border: none;
+        cursor: pointer;
+        text-overflow: ellipsis;
+    }
+}
+
+.container .button {
+    background-color: $accent;
+    color: $white;
+    border: none;
+
+    &:hover, &:active {
+        background-color: transparent !important;
+        color: $accent !important;
+    }
+
+    @include font-size(20px);
+}

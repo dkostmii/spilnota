@@ -1,0 +1,13 @@
+@import '@resources';
+
+.container {
+    padding: 0 rem(100);
+
+    @include mq($laptop) {
+        padding: 0 rem(60);
+    }
+
+    @include mq($tablet) {
+        padding: 0 rem(20);
+    }
+}
