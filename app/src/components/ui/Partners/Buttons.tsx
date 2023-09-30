@@ -13,7 +13,7 @@ const Buttons: FC = () => {
   return (
     <div className={styles["partners-buttons"]}>
       {showMorePartnersLink && (
-        <GhostButton type="link" className={styles["more-partners-link"]} href="/Partners">
+        <GhostButton type="route-link" className={styles["more-partners-link"]} to="/Partners">
           Дивитись більше
         </GhostButton>
       )}

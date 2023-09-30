@@ -8,6 +8,16 @@
 
 .photo {
     width: 100%;
+    height: rem(373);
+    object-fit: cover;
+
+    @include mq($laptop) {
+        height: rem(478);
+    }
+
+    @include mq($tablet) {
+        height: rem(282);
+    }
 }
 
 .content {

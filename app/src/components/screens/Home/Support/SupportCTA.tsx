@@ -11,7 +11,7 @@ const SupportCTA: FC = () => (
     <p className={sharedStyles["support-text"]}>
       Підтримайте Спільноту та подбайте про щасливе майбутнє молоді!
     </p>
-    <SecondaryButton type="link" className={sharedStyles["support-button"]} href="/Support">
+    <SecondaryButton type="route-link" className={sharedStyles["support-button"]} to="/Support">
       Підтримати
     </SecondaryButton>
   </div>

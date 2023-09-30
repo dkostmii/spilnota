@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import { Link } from 'react-router-dom'
 
 import type INews from '@interfaces/INews'
 
@@ -19,7 +20,7 @@ const NewsCard: FC<Props> = ({ data }) => {
   data.content = trimEllipsis(data.content, 10)
 
   return (
-    <a href={`/News/${data.id}`}>
+    <Link to={`/News/${data.id}`}>
       <div className={styles.container}>
         <img className={styles.image} src={data.photo.url} alt="" />
         <div className={styles.caption}>
@@ -27,7 +28,7 @@ const NewsCard: FC<Props> = ({ data }) => {
           <p className={styles.content}>{data.content}</p>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
 
