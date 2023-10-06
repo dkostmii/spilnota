@@ -1,13 +1,13 @@
-import breakpoints from '@data/breakpoints.json'
+import breakpoints from '@data/breakpoints.json';
 
-import type INews from '@interfaces/INews'
+import type INews from '@interfaces/INews';
 
 const slideSettings = {
   cardsPerSlide: 3,
   naturalSlideWidth: 100,
   naturalSlideHeight: 120,
   showDots: true,
-}
+};
 
 const responsiveSlideSettings = [
   {
@@ -24,29 +24,28 @@ const responsiveSlideSettings = [
     naturalSlideHeight: 136,
     showDots: true,
   },
-]
+];
 
 export const getResponsiveSettings = (width: number, data: INews[]) => {
-  let settings: Record<string, unknown> | undefined = responsiveSlideSettings.find(s => width <= s.breakpoint)
+  let settings: Record<string, unknown> | undefined = responsiveSlideSettings.find((s) => width <= s.breakpoint);
 
   if (!settings) {
-    settings = {}
+    settings = {};
   }
 
   if (data.length > 12 && width <= breakpoints.tablet) {
-    settings.showDots = false
+    settings.showDots = false;
   }
 
   if (data.length > 22 && width <= breakpoints.laptop) {
-    settings.showDots = false
+    settings.showDots = false;
   }
 
   if (data.length > 35 && width <= breakpoints.laptop) {
-    settings.showDots = false
+    settings.showDots = false;
   }
 
-  return { ...slideSettings, ...settings }
-}
+  return { ...slideSettings, ...settings };
+};
 
-
-export default slideSettings
+export default slideSettings;

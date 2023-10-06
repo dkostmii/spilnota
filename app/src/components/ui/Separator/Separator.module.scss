@@ -1,16 +1,16 @@
 @import '@resources';
 
 .separator {
-    background-color: #000;
-    flex-shrink: 0;
-    flex-grow: 1;
-    user-select: none;
+  background-color: #000;
+  flex-shrink: 0;
+  flex-grow: 1;
+  user-select: none;
 
-    &.vertical {
-        width: rem(1);
-    }
+  &.vertical {
+    width: rem(1);
+  }
 
-    &:not(.vertical) {
-        height: rem(1);
-    }
+  &:not(.vertical) {
+    height: rem(1);
+  }
 }

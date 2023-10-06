@@ -1,13 +1,13 @@
 @import '@resources';
 
 .page {
-    &_layout {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+  &_layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-    &_content {
-        flex: 1 1 100%;
-    }
+  &_content {
+    flex: 1 1 100%;
+  }
 }

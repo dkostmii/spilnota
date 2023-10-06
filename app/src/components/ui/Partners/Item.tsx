@@ -1,20 +1,27 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
-import type IPartner from '@interfaces/IPartner'
+import type IPartner from '@interfaces/IPartner';
 
-import styles from './Partners.module.scss'
+import styles from './Partners.module.scss';
 
 interface Props {
-  data: IPartner
+  data: IPartner;
 }
 
+const Item: FC<Props> = ({ data }) => {
+  let imgUrl = data.logo.url;
 
-const Item: FC<Props> = ({ data }) => (
-  <li className={styles["partners-element"]}>
-    <a href={data.url}>
-      <img className="img-container" src={data.imgUrl} alt="" />
-    </a>
-  </li>
-)
+  if (data.logo.formats && data.logo.formats.small) {
+    imgUrl = data.logo.formats.small.url;
+  }
 
-export default Item
+  return (
+    <li className={styles['partners-element']}>
+      <a href={data.url}>
+        <img className="img-container" src={imgUrl} alt="" />
+      </a>
+    </li>
+  );
+};
+
+export default Item;

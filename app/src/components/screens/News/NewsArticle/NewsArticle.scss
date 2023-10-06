@@ -1,45 +1,45 @@
 @import '@resources';
 
 .news-article {
-    & h2 {
-        font-family: Montserrat, sans-serif;
-        font-weight: 700;
-        line-height: 150%;
-        color: $accent;
-        padding-top: rem(60);
-        padding-bottom: rem(45);
+  & h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    line-height: 150%;
+    color: $accent;
+    padding-top: rem(60);
+    padding-bottom: rem(45);
 
-        @include font-size(32px);
+    @include font-size(32px);
 
-        @include mq($tablet) {
-            @include font-size(20px);
+    @include mq($tablet) {
+      @include font-size(20px);
 
-            font-weight: 700;
-        }
+      font-weight: 700;
+    }
+  }
+
+  & h4 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: 500;
+  }
+
+  & p {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 166.66%;
+    padding-bottom: rem(60);
+
+    & strong {
+      font-weight: 600;
     }
 
-    & h4 {
-        padding-top: 2%;
-        padding-bottom: 2%;
-        font-weight: 500;
+    @include font-size(24px);
+
+    @include mq($tablet) {
+      @include font-size(16px);
+
+      font-weight: 500;
     }
-
-    & p {
-        font-family: Montserrat, sans-serif;
-        font-weight: 500;
-        line-height: 166.66%;
-        padding-bottom: rem(60);
-
-        & strong {
-            font-weight: 600;
-        }
-
-        @include font-size(24px);
-
-        @include mq($tablet) {
-            @include font-size(16px);
-
-            font-weight: 500;
-        }
-    }
+  }
 }

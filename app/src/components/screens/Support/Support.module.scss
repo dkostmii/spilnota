@@ -1,89 +1,89 @@
 @import '@resources';
 
 .wrapper {
-    display: flex;
-    gap: rem(125);
-    padding-top: rem(113);
-    width: 90%;
+  display: flex;
+  gap: rem(125);
+  padding-top: rem(113);
+  width: 90%;
 
-    @include mq($laptop) {
-        gap: rem(59);
-        padding-top: rem(50);
-        width: 95%;
-    }
+  @include mq($laptop) {
+    gap: rem(59);
+    padding-top: rem(50);
+    width: 95%;
+  }
 
-    @include mq($tablet) {
-        flex-direction: column;
-        gap: rem(77);
-        padding-top: rem(45);
-        width: calc(100% - rem(20));
-    }
+  @include mq($tablet) {
+    flex-direction: column;
+    gap: rem(77);
+    padding-top: rem(45);
+    width: calc(100% - rem(20));
+  }
 }
 
 .message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: rem(360);
-    width: 100%;
-    gap: rem(57);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: rem(360);
+  width: 100%;
+  gap: rem(57);
 
-    @include mq($laptop) {
-        gap: rem(33);
-    }
+  @include mq($laptop) {
+    gap: rem(33);
+  }
 
-    @include mq($tablet) {
-        gap: rem(45);
-        max-width: none;
-        padding: 0 rem(20);
-    }
+  @include mq($tablet) {
+    gap: rem(45);
+    max-width: none;
+    padding: 0 rem(20);
+  }
 
-    &_img {
-        width: rem(178);
-        height: rem(178);
-    }
+  &_img {
+    width: rem(178);
+    height: rem(178);
+  }
 }
 
 .caption {
-    display: flex;
-    flex-direction: column;
-    gap: rem(57);
+  display: flex;
+  flex-direction: column;
+  gap: rem(57);
 
-    & > h1 {
-        @include font-size(36px);
+  & > h1 {
+    @include font-size(36px);
 
-        font-weight: 700;
-        padding: 0;
-        margin: 0;
-        text-align: left;
-        line-height: 150%;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    line-height: 150%;
 
-        @include mq($laptop-large) {
-            @include font-size(24px);
-        }
+    @include mq($laptop-large) {
+      @include font-size(24px);
     }
+  }
 
-    & > p {
-        @include font-size(28px);
+  & > p {
+    @include font-size(28px);
 
-        font-weight: 500;
-        line-height: 150%;
+    font-weight: 500;
+    line-height: 150%;
 
-        @include mq($laptop-large) {
-            @include font-size(20px);
-        }
-
-        @include mq($tablet) {
-            @include font-size(18px);
-        }
-    }
-
-    @include mq($laptop) {
-        gap: rem(35);
+    @include mq($laptop-large) {
+      @include font-size(20px);
     }
 
     @include mq($tablet) {
-        gap: rem(28);
+      @include font-size(18px);
     }
+  }
+
+  @include mq($laptop) {
+    gap: rem(35);
+  }
+
+  @include mq($tablet) {
+    gap: rem(28);
+  }
 }

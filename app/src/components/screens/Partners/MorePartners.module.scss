@@ -1,13 +1,13 @@
 @import '@resources';
 
 .container {
-    padding-top: rem(90);
+  padding-top: rem(90);
 
-    @include mq($laptop) {
-        padding-top: rem(50);
-    }
+  @include mq($laptop) {
+    padding-top: rem(50);
+  }
 
-    @include mq($tablet) {
-        padding-top: rem(45);
-    }
+  @include mq($tablet) {
+    padding-top: rem(45);
+  }
 }

@@ -1,75 +1,75 @@
 @import '@resources';
 
 .container {
-    background-image: url("@img/NewsCardBg.svg");
-    background-size: rem(375) rem(448);
-    padding: rem(0) rem(10) rem(50) rem(10);
-    background-clip: padding-box;
-    width: rem(375);
-    height: rem(448);
+  background-image: url('@img/NewsCardBg.svg');
+  background-size: rem(375) rem(448);
+  padding: rem(0) rem(10) rem(50) rem(10);
+  background-clip: padding-box;
+  width: rem(375);
+  height: rem(448);
 
-    @include mq($laptop) {
-        width: rem(342);
-        height: rem(458);
-        background-size: rem(342) rem(458);
-    }
+  @include mq($laptop) {
+    width: rem(342);
+    height: rem(458);
+    background-size: rem(342) rem(458);
+  }
 
-    @include mq($tablet) {
-        width: rem(276);
-        height: rem(380);
-        background-size: rem(276) rem(380);
-    }
+  @include mq($tablet) {
+    width: rem(276);
+    height: rem(380);
+    background-size: rem(276) rem(380);
+  }
 }
 
 .image {
-    border-radius: rem(20) rem(20) 0 0;
-    object-fit: cover;
-    width: rem(355);
-    height: rem(231);
+  border-radius: rem(20) rem(20) 0 0;
+  object-fit: cover;
+  width: rem(355);
+  height: rem(231);
 
-    @include mq($laptop) {
-        width: rem(322);
-        height: rem(209);
-    }
+  @include mq($laptop) {
+    width: rem(322);
+    height: rem(209);
+  }
 
-    @include mq($tablet) {
-        width: rem(256);
-        height: rem(167);
-    }
+  @include mq($tablet) {
+    width: rem(256);
+    height: rem(167);
+  }
 }
 
 .caption {
-    padding: rem(24) rem(28);
-    text-align: start;
+  padding: rem(24) rem(28);
+  text-align: start;
 
-    @include mq($laptop) {
-        padding: rem(22) rem(25);
-    }
+  @include mq($laptop) {
+    padding: rem(22) rem(25);
+  }
 
-    @include mq($tablet) {
-        padding: rem(17) rem(20);
-    }
+  @include mq($tablet) {
+    padding: rem(17) rem(20);
+  }
 }
 
 .title {
-    color: $accent;
-    line-height: 150%;
-    font-weight: 700;
+  color: $accent;
+  line-height: 150%;
+  font-weight: 700;
 
-    @include font-size(20px);
+  @include font-size(20px);
 
-    @include mq($tablet) {
-        @include font-size(16px);
-    }
+  @include mq($tablet) {
+    @include font-size(16px);
+  }
 }
 
 .content {
-    color: #000;
-    line-height: 150%;
+  color: #000;
+  line-height: 150%;
 
-    @include font-size(18px);
+  @include font-size(18px);
 
-    @include mq($tablet) {
-        @include font-size(16px);
-    }
+  @include mq($tablet) {
+    @include font-size(16px);
+  }
 }

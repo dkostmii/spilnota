@@ -1,6 +1,6 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
-import Section from '@components/layout/Section'
+import Section from '@components/layout/Section';
 
 import Header from './Header';
 import Photo from './Photo';
@@ -16,6 +16,6 @@ const AboutUs: FC = () => (
     <Program />
     <InformationList />
   </Section>
-)
+);
 
-export default AboutUs
+export default AboutUs;

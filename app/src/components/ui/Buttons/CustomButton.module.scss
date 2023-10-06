@@ -1,61 +1,65 @@
 @import '@resources';
 
 .button {
-    &_primary {
-        background-color: $yellow;
-        color: $accent;
+  &_primary {
+    background-color: $yellow;
+    color: $accent;
+  }
+
+  &_secondary {
+    background-color: $accent;
+    color: $white;
+  }
+
+  &_ghost {
+    background-color: transparent;
+    color: $accent;
+  }
+
+  &_primary,
+  &_secondary {
+    box-shadow: rem(1) rem(4) rem(14) rem(1) rgba($accent, 0.51);
+  }
+
+  &_primary,
+  &_secondary,
+  &_ghost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    border: none;
+
+    @include font-size(24px);
+
+    line-height: 112%;
+    font-weight: 700;
+    padding: rem(18) rem(36);
+    border-radius: rem(10);
+
+    @include mq($laptop) {
+      @include font-size(18px);
+
+      padding: rem(22) rem(38);
     }
 
-    &_secondary {
-        background-color: $accent;
-        color: $white;
+    @include mq($tablet) {
+      @include font-size(16px);
+
+      padding: rem(16) rem(28);
     }
 
-    &_ghost {
-        background-color: transparent;
-        color: $accent;
+    @include button-transition;
+
+    &:hover {
+      filter: brightness(110%);
+      cursor: pointer;
     }
 
-    &_primary, &_secondary {
-        box-shadow: rem(1) rem(4) rem(14) rem(1) rgba($accent, .51);
+    &:active,
+    &:target {
+      filter: brightness(80%);
     }
-
-    &_primary, &_secondary, &_ghost {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-family: Inter, sans-serif;
-        border: none;
-
-        @include font-size(24px);
-
-        line-height: 112%;
-        font-weight: 700;
-        padding: rem(18) rem(36);
-        border-radius: rem(10);
-
-        @include mq($laptop) {
-            @include font-size(18px);
-
-            padding: rem(22) rem(38);
-        }
-
-        @include mq($tablet) {
-            @include font-size(16px);
-
-            padding: rem(16) rem(28);
-        }
-
-        @include button-transition;
-
-        &:hover {
-            filter: brightness(110%);
-            cursor: pointer;
-        }
-
-        &:active, &:target {
-            filter: brightness(80%);
-        }
-    }
+  }
 }

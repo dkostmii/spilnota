@@ -1,50 +1,46 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
-import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 
-import Logo from '@components/ui/Logo'
-import Navigation from '@components/ui/Navigation'
+import Logo from '@components/ui/Logo';
+import Navigation from '@components/ui/Navigation';
 
-import Contacts from '@components/ui/Contacts'
-import Social from '@components/ui/Contacts/Social'
+import ContactsWrapper from '@components/ui/Contacts/Wrapper';
+import SocialWrapper from '@components/ui/Contacts/Social/Wrapper';
 
-import contactsData from '@data/contacts.json'
-import socialData from '@data/social'
-
-import style from './Footer.module.scss'
-
+import style from './Footer.module.scss';
 
 const Footer: FC = () => {
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
 
   const links = [
     {
-      title: "Про нас",
-      href: "#AboutUs",
+      title: 'Про нас',
+      href: '#AboutUs',
     },
     {
-      title: "Концепція",
-      href: "#Concept",
+      title: 'Концепція',
+      href: '#Concept',
     },
     {
-      title: "Новини",
-      href: "#News",
+      title: 'Новини',
+      href: '#News',
     },
     {
-      title: "Партнери",
-      href: "#Partners",
+      title: 'Партнери',
+      href: '#Partners',
     },
-  ]
+  ];
 
-  const isHome = pathname === '/'
+  const isHome = pathname === '/';
 
   if (!isHome) {
-    links.forEach(l => {
-      l.href = `/${l.href}`
-    })
+    links.forEach((l) => {
+      l.href = `/${l.href}`;
+    });
   }
 
-  const invertClass = (!isHome ? ` ${style.invert}` : '')
+  const invertClass = !isHome ? ` ${style.invert}` : '';
 
   return (
     <footer>
@@ -60,14 +56,15 @@ const Footer: FC = () => {
               isDark={isHome}
               vertical
               data={links}
-              customListClass={style["navigation-list"]} />
-            <Contacts className={style.content_contacts} invert={!isHome} {...contactsData} />
-            <Social className={style.content_social} dark={isHome} socialNetworks={socialData} />
+              customListClass={style['navigation-list']}
+            />
+            <ContactsWrapper className={style.content_contacts} invert={!isHome} />
+            <SocialWrapper className={style.content_social} dark={isHome} />
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

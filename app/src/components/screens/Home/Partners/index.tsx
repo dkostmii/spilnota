@@ -1,29 +1,43 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
-import { useMemo } from 'react'
+import Section from '@components/layout/Section';
 
-import partnersData from '@data/partners_temp'
+import PartnersList from '@components/ui/Partners/List';
+import PartnersButtons from '@components/ui/Partners/Buttons';
+import InlineLoader from '@components/ui/Loader/InlineLoader';
 
-import Section from '@components/layout/Section'
+import { useGetPartnersQuery } from '@store/services/partners';
 
-import PartnersList from "@components/ui/Partners/List";
-import PartnersButtons from "@components/ui/Partners/Buttons"
-
-import style from './Partners.module.scss'
-
+import style from './Partners.module.scss';
 
 const Partners: FC = () => {
-  const data = useMemo(() => new Array(20).fill(partnersData[0]), [])
+  const { data, error, isLoading } = useGetPartnersQuery();
+
+  if (error) {
+    throw new Error('Unable to load data');
+  }
+
+  if (!isLoading && !error && !data) {
+    throw new Error('Unable to load data');
+  }
+
+  if (!isLoading && data.length < 1) {
+    return null;
+  }
 
   return (
     <Section id="Partners">
       <h2 className="section-title">Наші партнери</h2>
-      <div className={style.container}>
-        <PartnersList data={data} />
-        <PartnersButtons />
-      </div>
+      {isLoading ? (
+        <InlineLoader />
+      ) : (
+        <div className={style.container}>
+          <PartnersList data={data} />
+          <PartnersButtons />
+        </div>
+      )}
     </Section>
-  )
-}
+  );
+};
 
-export default Partners
+export default Partners;

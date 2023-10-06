@@ -1,24 +1,24 @@
 @import '@resources';
 
 .separator {
-    background-color: $white;
+  background-color: $white;
 
-    &_wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: rem(50) 0;
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(50) 0;
 
-        @include mq($tablet) {
-            padding: rem(35) 0;
-        }
+    @include mq($tablet) {
+      padding: rem(35) 0;
     }
+  }
 
-    &:not(.vertical) {
-        height: rem(2);
+  &:not(.vertical) {
+    height: rem(2);
 
-        @include mq($mobile + 1, '>') {
-            width: calc(100% + rem(45));
-        }
+    @include mq($mobile + 1, '>') {
+      width: calc(100% + rem(45));
     }
+  }
 }

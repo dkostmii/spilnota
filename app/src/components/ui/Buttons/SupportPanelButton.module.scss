@@ -1,29 +1,29 @@
 @import '@resources';
 
 .button {
-    @include font-size(24px);
+  @include font-size(24px);
 
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    line-height: 121%;
-    padding: 0 rem(40);
-    height: rem(84);
-    display: flex;
-    align-items: center;
-    background-color: $variant;
-    color: $accent;
-    border: none;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  line-height: 121%;
+  padding: 0 rem(40);
+  height: rem(84);
+  display: flex;
+  align-items: center;
+  background-color: $variant;
+  color: $accent;
+  border: none;
 
-    @include mq($laptop-large) {
-        @include font-size(18px);
+  @include mq($laptop-large) {
+    @include font-size(18px);
 
-        padding: 0 rem(30);
-        height: rem(66);
-    }
+    padding: 0 rem(30);
+    height: rem(66);
+  }
 
-    @include mq($tablet) {
-        @include font-size(16px);
+  @include mq($tablet) {
+    @include font-size(16px);
 
-        height: rem(57);
-    }
+    height: rem(57);
+  }
 }

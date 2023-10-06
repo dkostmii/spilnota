@@ -1,9 +1,13 @@
 export interface ISupport {
-  title: string
-  url: string
+  id: string;
+  title: string;
+  url: string;
+  order: number;
 }
 
 export interface ISupportCollection {
-  title: string
-  items: ISupport[]
+  id: string;
+  title: string;
+  items: ISupport[];
+  order: number;
 }

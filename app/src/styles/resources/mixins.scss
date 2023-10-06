@@ -1,24 +1,44 @@
 @mixin button-transition() {
-    transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
 }
 
 /* -- Media Queries -- */
 @mixin mq($size: $mobile, $type: '<', $size-next: null) {
-    @if $type == '>' {
-        @media (min-width: #{$size}px) {
-            @content;
-        }
+  @if $type == '>' {
+    @media (min-width: #{$size}px) {
+      @content;
     }
+  }
 
-    @if $type == '<' {
-        @media (max-width: #{$size}px) {
-            @content;
-        }
+  @if $type == '<' {
+    @media (max-width: #{$size}px) {
+      @content;
     }
+  }
 
-    @if $type == '<>' {
-        @media screen and (min-width: #{$size}px) and (max-width: #{$size-next}px) {
-            @content;
-        }
+  @if $type == '<>' {
+    @media screen and (min-width: #{$size}px) and (max-width: #{$size-next}px) {
+      @content;
     }
+  }
+}
+
+@mixin mq-height($size: $mobile, $type: '<', $size-next: null) {
+  @if $type == '>' {
+    @media (min-height: #{$size}px) {
+      @content;
+    }
+  }
+
+  @if $type == '<' {
+    @media (max-height: #{$size}px) {
+      @content;
+    }
+  }
+
+  @if $type == '<>' {
+    @media screen and (min-height: #{$size}px) and (max-height: #{$size-next}px) {
+      @content;
+    }
+  }
 }

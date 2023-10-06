@@ -1,39 +1,39 @@
-declare module "*.module.css" {
+declare module '*.module.css' {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
 
-declare module "*.module.scss" {
+declare module '*.module.scss' {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
 
-declare module "*.module.sass" {
+declare module '*.module.sass' {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
 
-declare module "*.png" {
+declare module '*.png' {
   const url: string;
   export default url;
 }
 
-declare module "*.jpg" {
+declare module '*.jpg' {
   const url: string;
   export default url;
 }
 
-declare module "*.jpeg" {
+declare module '*.jpeg' {
   const url: string;
   export default url;
 }
 
-declare module "*.webp" {
+declare module '*.webp' {
   const url: string;
   export default url;
 }
 
-declare module "*.svg" {
+declare module '*.svg' {
   const url: string;
   export default url;
 }

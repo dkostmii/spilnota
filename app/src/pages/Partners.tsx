@@ -1,7 +1,12 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
-import MorePartners from '@components/screens/Partners/MorePartners'
+import MorePartners from '@components/screens/Partners/MorePartners';
+import RetryFetch from '@components/ui/RetryFetch';
 
-const Partners: FC = () => <MorePartners />
+const Partners: FC = () => (
+  <RetryFetch>
+    <MorePartners />
+  </RetryFetch>
+);
 
-export default Partners
+export default Partners;

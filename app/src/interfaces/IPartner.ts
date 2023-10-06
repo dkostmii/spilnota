@@ -1,4 +1,6 @@
+import { StrapiImage } from './strapi';
+
 export default interface IPartner {
-  url: string
-  imgUrl: string
+  url: string;
+  logo: StrapiImage;
 }

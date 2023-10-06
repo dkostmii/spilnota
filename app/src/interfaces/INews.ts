@@ -1,8 +1,8 @@
+import { StrapiImage } from './strapi';
+
 export default interface INews {
-  id: string
-  photo: {
-    url: string
-  }
-  title: string
-  content: string
+  id: string;
+  photo: StrapiImage;
+  title: string;
+  content: string;
 }

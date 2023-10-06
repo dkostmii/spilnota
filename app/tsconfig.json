@@ -31,11 +31,10 @@
       "@helpers/*": ["src/helpers/*"],
       "@img/*": ["src/img/*"],
       "@img": ["src/img/index.ts"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@store/*": ["src/store/*"]
     },
-    "types": [
-      "vite/client"
-    ]
+    "types": ["vite/client"]
   },
   "include": ["src", "modules.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]

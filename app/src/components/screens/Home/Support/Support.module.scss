@@ -1,111 +1,111 @@
 @import '@resources';
 
 .wrapper {
-    padding-bottom: rem(153);
+  padding-bottom: rem(153);
 
-    @include mq($laptop) {
-        padding-bottom: rem(80);
-    }
+  @include mq($laptop) {
+    padding-bottom: rem(80);
+  }
 }
 
 .layout {
-    display: flex;
-    align-items: stretch;
+  display: flex;
+  align-items: stretch;
+
+  @include mq($tablet) {
+    flex-direction: column-reverse;
+    gap: rem(26);
+  }
+
+  &_separator {
+    width: rem(1.5);
+    background-color: #c6c6c6;
+    flex-shrink: 0;
+    flex-grow: 1;
 
     @include mq($tablet) {
-        flex-direction: column-reverse;
-        gap: rem(26);
+      display: none;
     }
 
-    &_separator {
-        width: rem(1.5);
-        background-color: #C6C6C6;
-        flex-shrink: 0;
-        flex-grow: 1;
+    &_wrapper {
+      display: flex;
+      padding: rem(32.5) rem(54);
 
-        @include mq($tablet) {
-            display: none;
-        }
-
-        &_wrapper {
-            display: flex;
-            padding: rem(32.5) rem(54);
-
-            @include mq($phablet) {
-                display: none;
-            }
-        }
+      @include mq($phablet) {
+        display: none;
+      }
     }
+  }
 }
 
 .bank-details-wrapper {
-    padding-right: rem(112);
-    width: calc(50% + rem(112));
+  padding-right: rem(112);
+  width: calc(50% + rem(112));
 
-    @include mq($laptop) {
-        padding-right: rem(32);
-    }
+  @include mq($laptop) {
+    padding-right: rem(32);
+  }
 
-    @include mq($tablet) {
-        padding-right: 0;
-        width: 100%;
-    }
+  @include mq($tablet) {
+    padding-right: 0;
+    width: 100%;
+  }
 }
 
 .support-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 0;
-    flex-shrink: 1;
-    gap: rem(40);
-    padding-top: 5%;
-    padding-bottom: 8%;
-    padding-right: 8%;
-    min-width: rem(400);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  gap: rem(40);
+  padding-top: 5%;
+  padding-bottom: 8%;
+  padding-right: 8%;
+  min-width: rem(400);
 
-    @include mq($tablet, '>') {
-        width: 45%;
-    }
+  @include mq($tablet, '>') {
+    width: 45%;
+  }
 
-    @include mq($tablet) {
-        flex-direction: column-reverse;
-        padding: 0 10%;
-    }
+  @include mq($tablet) {
+    flex-direction: column-reverse;
+    padding: 0 10%;
+  }
 
-    @include mq($phablet) {
-        padding: 0 rem(20);
-    }
+  @include mq($phablet) {
+    padding: 0 rem(20);
+  }
 }
 
 .support-text {
-    line-height: 150%;
-    text-align: start;
+  line-height: 150%;
+  text-align: start;
 
-    @include font-size(24px);
+  @include font-size(24px);
 
-    @include mq($laptop) {
-        @include font-size(20px);
-    }
+  @include mq($laptop) {
+    @include font-size(20px);
+  }
 }
 
 .support-button {
-    background-color: $accent;
-    color: $white;
+  background-color: $accent;
+  color: $white;
+  width: rem(273);
+  height: rem(65);
+  border: 0;
+  border-radius: rem(8);
+  font-family: Inter, sans-serif;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include font-size(24px);
+
+  @include mq($laptop) {
     width: rem(273);
     height: rem(65);
-    border: 0;
-    border-radius: rem(8);
-    font-family: Inter, sans-serif;
-    line-height: 120%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include font-size(24px);
-
-    @include mq($laptop) {
-        width: rem(273);
-        height: rem(65);
-    }
+  }
 }

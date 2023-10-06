@@ -1,19 +1,18 @@
-function calcHeader(): { width: number, height: number } | null {
-  const header = document.getElementById("header")
+function calcHeader(): { width: number; height: number } | null {
+  const header = document.getElementById('header');
 
   if (!header) {
-    return null
+    return null;
   }
 
-
-  const inner = header.querySelector("div")
+  const inner = header.querySelector('div');
 
   if (!inner) {
-    return null
+    return null;
   }
 
-  const { offsetWidth: width, offsetHeight: height } = inner
-  return { width, height }
+  const { offsetWidth: width, offsetHeight: height } = inner;
+  return { width, height };
 }
 
-export default calcHeader
+export default calcHeader;

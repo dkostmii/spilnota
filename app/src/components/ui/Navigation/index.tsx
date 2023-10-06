@@ -1,19 +1,19 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
-import style from './Navigation.module.scss'
+import style from './Navigation.module.scss';
 
 interface NavigationData {
-  title: string
-  href: string
+  title: string;
+  href: string;
 }
 
 interface Props {
-  data: NavigationData[]
-  isDark?: boolean
-  vertical?: boolean | "center"
-  fullSize?: boolean
-  customListClass?: string
-  className?: string
+  data: NavigationData[];
+  isDark?: boolean;
+  vertical?: boolean | 'center';
+  fullSize?: boolean;
+  customListClass?: string;
+  className?: string;
 }
 
 const Navigation: FC<Props> = ({
@@ -24,34 +24,34 @@ const Navigation: FC<Props> = ({
   className,
   customListClass,
 }) => {
-  let listClassName = style.list
-  let wrapperClass
+  let listClassName = style.list;
+  let wrapperClass;
 
   if (isDark) {
-    listClassName += ` ${style.dark}`
+    listClassName += ` ${style.dark}`;
   }
 
   if (vertical) {
-    listClassName += ` ${style.vertical}`
+    listClassName += ` ${style.vertical}`;
 
-    if (vertical === "center") {
-      listClassName += ` ${style.center}`
+    if (vertical === 'center') {
+      listClassName += ` ${style.center}`;
     }
   }
 
   if (fullSize) {
-    wrapperClass = style["flex-grow"]
-    listClassName += ` ${style["space-evenly"]}`
+    wrapperClass = style['flex-grow'];
+    listClassName += ` ${style['space-evenly']}`;
   }
 
   if (customListClass) {
-    listClassName += ` ${customListClass}`
+    listClassName += ` ${customListClass}`;
   }
 
   if (className && wrapperClass) {
-    className = `${wrapperClass} ${className}`
+    className = `${wrapperClass} ${className}`;
   } else if (wrapperClass) {
-    className = wrapperClass
+    className = wrapperClass;
   }
 
   return (
@@ -59,12 +59,14 @@ const Navigation: FC<Props> = ({
       <ul className={listClassName}>
         {data.map(({ title, href }, id) => (
           <li key={id}>
-            <a className={`hover-link ${style.link}`} href={href}>{title}</a>
+            <a className={`hover-link ${style.link}`} href={href}>
+              {title}
+            </a>
           </li>
         ))}
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

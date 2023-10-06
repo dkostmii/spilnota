@@ -1,54 +1,51 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
+import type IContacts from '@interfaces/IContacts';
 
-import img from '@img'
+import img from '@img';
 
-import style from './Contacts.module.scss'
+import style from './Contacts.module.scss';
 
-interface Props {
-  phone: string
-  email: string
-  address: string
-  className?: string
-  invert?: boolean
+export interface Props extends IContacts {
+  className?: string;
+  invert?: boolean;
 }
 
-const linkClass = `hover-link ${style.link}`
+const linkClass = `hover-link ${style.link}`;
 
-
-const Contacts: FC<Props> = ({ className, phone, email, address, invert = false }) => {
+const Contacts: FC<Props> = ({ className, phone, email, location, invert = false }) => {
   if (className) {
-    className = `${style.container} ${className}`
+    className = `${style.container} ${className}`;
   } else {
-    className = style.container
+    className = style.container;
   }
 
-  const invertClass = invert ? ` ${style.invert}` : ''
+  const invertClass = invert ? ` ${style.invert}` : '';
 
   return (
     <div className={className}>
       <h3 className={`${style.title}${invertClass}`}>Контакти</h3>
       <ul className={`${style.list}${invertClass}`}>
         <li className={style.item}>
-          <a className={linkClass} href={`tel:${phone}`}>
+          <a className={linkClass} href={`tel:${phone}`} target="_blank">
             <img className={style.icon} src={invert ? img.PhoneIconLight : img.PhoneIcon} alt="" />
             <span className={style.caption}>{phone}</span>
           </a>
         </li>
         <li className={style.item}>
-          <a className={linkClass} href={`mailto:${email}`}>
+          <a className={linkClass} href={`mailto:${email}`} target="_blank">
             <img className={style.icon} src={invert ? img.MailIconLight : img.MailIcon} alt="" />
             <span className={style.caption}>{email}</span>
           </a>
         </li>
         <li className={style.item}>
-          <a className={linkClass} href={`https://maps.google.com/?q=${encodeURIComponent(address)}`}>
+          <a className={linkClass} href={`https://maps.google.com/?q=${encodeURIComponent(location)}`} target="_blank">
             <img className={style.icon} src={invert ? img.MapMarkerIconLight : img.MapMarkerIcon} alt="" />
-            <span className={style.caption}>{address}</span>
+            <span className={style.caption}>{location}</span>
           </a>
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Contacts
+export default Contacts;

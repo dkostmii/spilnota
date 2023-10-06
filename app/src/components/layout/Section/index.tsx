@@ -1,10 +1,10 @@
-import type { FC, PropsWithChildren } from 'react'
+import type { FC, PropsWithChildren } from 'react';
 
-import style from './Section.module.scss'
+import style from './Section.module.scss';
 
 interface Props {
-  id: string
-  className?: string
+  id: string;
+  className?: string;
 }
 
 const Section: FC<Props & PropsWithChildren> = ({ id, className, children }) => (
@@ -12,8 +12,8 @@ const Section: FC<Props & PropsWithChildren> = ({ id, className, children }) => 
     <div className={style.anchor_wrapper}>
       <span className={style.anchor} id={id}></span>
     </div>
-    { children }
+    {children}
   </section>
-)
+);
 
-export default Section
+export default Section;

@@ -1,30 +1,53 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
-import ReactMarkdown from 'react-markdown'
+import { useParams, useNavigate } from 'react-router-dom';
 
-import useHeaderSize from '@hooks/useHeaderSize'
+import ReactMarkdown from 'react-markdown';
 
-import newsData from '@data/news_temp';
+import InlineLoader from '@components/ui/Loader/InlineLoader';
+
+import { useGetNewsArticleQuery } from '@store/services/news';
+import useResponsiveImage from '@hooks/useResponsiveImage';
+import useHeaderSize from '@hooks/useHeaderSize';
 
 import styles from './NewsArticle.module.scss';
+
 import './NewsArticle.scss';
 
-const data = newsData[0]
-
 const NewsArticle: FC = () => {
-  const { height: headerHeight } = useHeaderSize()
+  const { height: headerHeight } = useHeaderSize();
+  const navigate = useNavigate();
+  let { newsArticleId } = useParams();
+
+  if (!newsArticleId) {
+    newsArticleId = '';
+    navigate('/');
+  }
+
+  const { data, error, isLoading } = useGetNewsArticleQuery(newsArticleId);
+  const image = useResponsiveImage(data && data.photo && data.photo);
+
+  if (error) {
+    throw new Error('Unable to load data');
+  }
+
+  if (!isLoading && !error && !data) {
+    throw new Error('Unable to load data');
+  }
+
+  if (isLoading) {
+    return <InlineLoader />;
+  }
 
   return (
     <div className={styles.container} style={{ paddingTop: headerHeight }}>
-      <img className={styles.photo} src={data.photo.url} alt="" />
+      {image && image.url && <img className={styles.photo} src={image.url} alt="" />}
       <div className={`${styles.content} news-article`}>
         <h2 className={styles.title}>{data.title}</h2>
-        <ReactMarkdown>
-          {data.content}
-        </ReactMarkdown>
+        <ReactMarkdown>{data.content}</ReactMarkdown>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NewsArticle
+export default NewsArticle;

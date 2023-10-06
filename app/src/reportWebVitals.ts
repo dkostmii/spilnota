@@ -3,10 +3,14 @@ import type {
   FIDReportCallback,
   FCPReportCallback,
   LCPReportCallback,
-  TTFBReportCallback
-} from 'web-vitals'
+  TTFBReportCallback,
+} from 'web-vitals';
 
-type PerfEntryCallback = CLSReportCallback & FIDReportCallback & FCPReportCallback & LCPReportCallback & TTFBReportCallback
+type PerfEntryCallback = CLSReportCallback &
+  FIDReportCallback &
+  FCPReportCallback &
+  LCPReportCallback &
+  TTFBReportCallback;
 
 const reportWebVitals = (onPerfEntry?: PerfEntryCallback) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {

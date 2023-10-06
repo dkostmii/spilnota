@@ -1,25 +1,26 @@
-import type { MarkedOptions } from 'marked'
-import { Renderer } from 'marked'
+import type { MarkedOptions } from 'marked';
+import { Renderer } from 'marked';
 
 // Source: https://github.com/etler/marked-plaintext/blob/master/index.js
 
 interface PlaintextOptions extends MarkedOptions {
-  spaces?: boolean
+  spaces?: boolean;
 }
 
-
 class PlaintextRenderer extends Renderer {
-  private whitespaceDelimiter: string
-  public options: PlaintextOptions
+  private whitespaceDelimiter: string;
+  public options: PlaintextOptions;
 
   constructor(options?: MarkedOptions) {
-    super(options)
+    super(options);
     this.options = options || {};
     this.whitespaceDelimiter = this.options.spaces ? ' ' : '\n';
   }
 
   code(code: string) {
-    return this.whitespaceDelimiter + this.whitespaceDelimiter + code + this.whitespaceDelimiter + this.whitespaceDelimiter;
+    return (
+      this.whitespaceDelimiter + this.whitespaceDelimiter + code + this.whitespaceDelimiter + this.whitespaceDelimiter
+    );
   }
 
   blockquote(quote: string) {
@@ -51,7 +52,7 @@ class PlaintextRenderer extends Renderer {
   }
 
   table(header: string, body: string) {
-    return  this.whitespaceDelimiter + header + this.whitespaceDelimiter + body + this.whitespaceDelimiter;
+    return this.whitespaceDelimiter + header + this.whitespaceDelimiter + body + this.whitespaceDelimiter;
   }
 
   tablerow(content: string) {
@@ -95,4 +96,4 @@ class PlaintextRenderer extends Renderer {
   }
 }
 
-export default PlaintextRenderer
+export default PlaintextRenderer;

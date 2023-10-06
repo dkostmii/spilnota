@@ -1,23 +1,22 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
-import { GhostButton } from './CustomButton'
+import { GhostButton } from './CustomButton';
 
-import useWindowSize from '@hooks/useWindowSize'
-import breakpoints from '@data/breakpoints.json'
-import config from '@/config'
+import useWindowSize from '@hooks/useWindowSize';
+import breakpoints from '@data/breakpoints.json';
+import config from '@/config';
 
-import style from './ReturnButton.module.scss'
-
+import style from './ReturnButton.module.scss';
 
 const ReturnButton: FC = () => {
-  const { width } = useWindowSize(config.resizeDebounceTimeMs)
-  const displayText = width > breakpoints.laptop
+  const { width } = useWindowSize(config.resizeDebounceTimeMs);
+  const displayText = width > breakpoints.laptop;
 
   return (
-    <GhostButton type="link" href="/" className={style.button}>
-      {displayText && "Повернутися"}
+    <GhostButton type="route-link" to="/" className={style.button}>
+      {displayText && 'Повернутися'}
     </GhostButton>
-  )
-}
+  );
+};
 
-export default ReturnButton
+export default ReturnButton;

@@ -1,117 +1,151 @@
 @import '@resources';
 
-.layout {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    background: $accent;
-    border-radius: 0 rem(20) rem(20) 0;
-    min-height: rem(832);
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: rem(233);
+  min-height: rem(212);
+  width: 100%;
+
+  @include mq($laptop) {
+    min-width: rem(205);
+    min-height: rem(200);
+  }
+
+  @include mq($tablet) {
+    min-width: rem(148);
+    min-height: rem(143);
+  }
+
+  &_icon {
+    width: rem(96);
+    height: rem(96);
 
     @include mq($laptop) {
-        min-height: rem(632);
+      width: rem(72);
+      height: rem(72);
     }
 
     @include mq($tablet) {
-        justify-content: flex-start;
-        justify-content: stretch;
-        min-height: rem(550);
+      width: rem(64);
+      height: rem(64);
     }
+  }
+}
 
+.layout {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background: $accent;
+  border-radius: 0 rem(20) rem(20) 0;
+  min-height: rem(832);
+
+  @include mq($laptop) {
+    min-height: rem(632);
+  }
+
+  @include mq($tablet) {
+    justify-content: flex-start;
+    justify-content: stretch;
+    min-height: rem(550);
+  }
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 100%;
-    gap: rem(54);
-    padding: rem(71) rem(105);
-    box-sizing: content-box;
-    max-width: rem(505);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  gap: rem(54);
+  padding: rem(71) rem(105);
+  box-sizing: content-box;
+  max-width: rem(505);
 
-    @include mq($laptop) {
-        gap: rem(45);
-        padding: rem(50) rem(60);
-    }
+  @include mq($laptop) {
+    gap: rem(45);
+    padding: rem(50) rem(60);
+  }
 
-    @include mq($tablet) {
-        gap: rem(38);
-        padding: rem(46) rem(42) rem(46) rem(20);
-        max-width: none;
-    }
+  @include mq($tablet) {
+    gap: rem(38);
+    padding: rem(46) rem(42) rem(46) rem(20);
+    max-width: none;
+  }
 }
 
 .heading {
-    display: flex;
-    gap: rem(50);
-    min-height: rem(50);
-    align-items: center;
+  display: flex;
+  gap: rem(50);
+  min-height: rem(50);
+  align-items: center;
 
-    &_shift {
-        @include mq($laptop-large, '>') {
-            transform: translateX(rem(-100));
-        }
+  &_shift {
+    @include mq($laptop-large, '>') {
+      transform: translateX(rem(-100));
     }
+  }
 }
 
 .return-button {
-    padding: 0;
+  padding: 0;
 
-    &_icon {
-        content: "";
-        object-fit: cover;
-        width: rem(50);
-        height: rem(50);
+  &_icon {
+    content: '';
+    object-fit: cover;
+    width: rem(50);
+    height: rem(50);
 
-        @include mq($tablet) {
-            width: rem(40);
-            height: rem(40);
-        }
+    @include mq($tablet) {
+      width: rem(40);
+      height: rem(40);
     }
+  }
 }
 
 .title {
-    line-height: 122%;
-    font-weight: 700;
-    color: $white;
+  line-height: 122%;
+  font-weight: 700;
+  color: $white;
 
-    @include font-size(32px);
+  @include font-size(32px);
 
-    @include mq($laptop-large) {
-        @include font-size(24px);
-    }
+  @include mq($laptop-large) {
+    @include font-size(24px);
+  }
 
-    @include mq($tablet) {
-        @include font-size(18px);
-    }
+  @include mq($tablet) {
+    @include font-size(18px);
+  }
 }
 
 .items {
-    display: flex;
-    flex-direction: column;
-    gap: rem(40);
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
 
-    @include mq($laptop) {
-        gap: rem(30);
-    }
+  @include mq($laptop) {
+    gap: rem(30);
+  }
 
-    @include mq($tablet) {
-        gap: rem(28);
-    }
+  @include mq($tablet) {
+    gap: rem(28);
+  }
 }
 
 .button {
-    &_coll {
-        display: flex;
-        justify-content: space-between;
+  &_coll {
+    display: flex;
+    justify-content: space-between;
 
-        &::after {
-            content: "";
-            background-image: url("@img/Triangle.svg");
-            width: rem(21);
-            height: rem(25);
-            background-repeat: no-repeat;
-            background-size: rem(21) rem(25);
-        }
+    &::after {
+      content: '';
+      background-image: url('@img/Triangle.svg');
+      width: rem(21);
+      height: rem(25);
+      background-repeat: no-repeat;
+      background-size: rem(21) rem(25);
     }
+  }
 }

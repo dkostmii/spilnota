@@ -2,39 +2,39 @@
 
 /* -- Percent -- */
 @function percent($px, $from) {
-    $result: math.div($px, $from) * 100%;
+  $result: math.div($px, $from) * 100%;
 
-    @return $result;
+  @return $result;
 }
 
 /* -- Rem -- */
 @function rem($px) {
-    $result: math.div($px, 16) + rem;
+  $result: math.div($px, 16) + rem;
 
-    @return $result;
+  @return $result;
 }
 
 /* -- Em -- */
 @function em($px, $current: 16) {
-    $result: math.div($px, $current) + em;
+  $result: math.div($px, $current) + em;
 
-    @return $result;
+  @return $result;
 }
 
 /* -- Hex Opacity -- */
 @function hex-opacity($hex, $opacity) {
-    $result: rgba($hex, $opacity);
+  $result: rgba($hex, $opacity);
 
-    @return $result;
+  @return $result;
 }
 
 /// Remove the unit of a length
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-        @return $number / ($number * 0 + 1);
-    }
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
 
-    @return $number;
+  @return $number;
 }

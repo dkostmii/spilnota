@@ -1,10 +1,10 @@
-import LMR from '@img/Logo_LMR.svg'
+import LMR from '@img/Logo_LMR.svg';
 
 const partners = [
   {
-    url: "https://city-adm.lviv.ua/",
+    url: 'https://city-adm.lviv.ua/',
     imgUrl: LMR,
   },
-]
+];
 
-export default partners
+export default partners;

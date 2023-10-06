@@ -1,26 +1,29 @@
 @import '@resources';
 
 .container .input {
-    @include font-size(20px);
+  @include font-size(20px);
 
-    &, &:focus, &:active {
-        background-color: $accent;
-        color: $white;
-        border: none;
-        cursor: pointer;
-        text-overflow: ellipsis;
-    }
-}
-
-.container .button {
+  &,
+  &:focus,
+  &:active {
     background-color: $accent;
     color: $white;
     border: none;
+    cursor: pointer;
+    text-overflow: ellipsis;
+  }
+}
 
-    &:hover, &:active {
-        background-color: transparent !important;
-        color: $accent !important;
-    }
+.container .button {
+  background-color: $accent;
+  color: $white;
+  border: none;
 
-    @include font-size(20px);
+  &:hover,
+  &:active {
+    background-color: transparent !important;
+    color: $accent !important;
+  }
+
+  @include font-size(20px);
 }

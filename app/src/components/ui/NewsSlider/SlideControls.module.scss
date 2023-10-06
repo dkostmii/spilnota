@@ -1,83 +1,85 @@
 @import '@resources';
 
 .container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: rem(50);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: rem(50);
 
-    @include mq($laptop) {
-        gap: rem(42);
-    }
+  @include mq($laptop) {
+    gap: rem(42);
+  }
 }
 
 .arrow {
-    &_prev {
-        background: none;
-        background-image: url("@img/ChevronLeftCircle.svg");
+  &_prev {
+    background: none;
+    background-image: url('@img/ChevronLeftCircle.svg');
+  }
+
+  &_next {
+    background: none;
+    background-image: url('@img/ChevronRightCircle.svg');
+  }
+
+  &_next,
+  &_prev {
+    flex-shrink: 0;
+    width: rem(50) !important;
+    height: rem(50) !important;
+    background-repeat: none !important;
+    background-size: cover !important;
+    cursor: pointer;
+    border: none;
+    opacity: 1;
+    transform-origin: center center;
+
+    @include button-transition;
+
+    &:hover {
+      opacity: 0.5;
     }
 
-    &_next {
-        background: none;
-        background-image: url("@img/ChevronRightCircle.svg");
+    &:active,
+    &:target {
+      transform: scale(90%);
     }
+  }
 
-    &_next, &_prev {
-        flex-shrink: 0;
-        width: rem(50) !important;
-        height: rem(50) !important;
-        background-repeat: none !important;
-        background-size: cover !important;
-        cursor: pointer;
-        border: none;
-        opacity: 1;
-        transform-origin: center center;
-
-        @include button-transition;
-
-        &:hover {
-            opacity: .5;
-        }
-
-        &:active, &:target {
-            transform: scale(90%);
-        }
-    }
-
-    &::before {
-        display: none;
-    }
+  &::before {
+    display: none;
+  }
 }
 
 .dots {
+  display: flex;
+  gap: rem(3);
+
+  & > button {
+    background: none;
+    background-color: rgba($accent, 0);
+    border: none;
+    border-radius: 100%;
     display: flex;
-    gap: rem(3);
+    align-items: center;
+    justify-content: center;
+    width: rem(20);
+    height: rem(20);
+    cursor: pointer;
 
-    & > button {
-        background: none;
-        background-color: rgba($accent, 0);
-        border: none;
-        border-radius: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: rem(20);
-        height: rem(20);
-        cursor: pointer;
+    @include button-transition;
 
-        @include button-transition;
-
-        &::before {
-            content: "";
-            width: rem(10);
-            height: rem(10);
-            flex-shrink: 0;
-            background-color: $accent;
-            border-radius: inherit;
-        }
+    &::before {
+      content: '';
+      width: rem(10);
+      height: rem(10);
+      flex-shrink: 0;
+      background-color: $accent;
+      border-radius: inherit;
     }
+  }
 
-    & > button:disabled {
-        background-color: rgba($accent, .46);
-    }
+  & > button:disabled {
+    background-color: rgba($accent, 0.46);
+  }
 }

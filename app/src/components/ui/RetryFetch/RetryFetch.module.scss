@@ -1,0 +1,57 @@
+@import '@resources';
+
+.container,
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  gap: rem(24);
+  padding-top: rem(113);
+
+  @include mq($laptop) {
+    padding-top: rem(50);
+  }
+
+  @include mq($tablet) {
+    padding-top: rem(45);
+  }
+}
+
+.content {
+  justify-content: center;
+  gap: rem(36);
+}
+
+.title {
+  font-weight: 600;
+  color: $accent;
+  line-height: 150%;
+
+  @include font-size(24px);
+
+  @include mq($laptop) {
+    @include font-size(20px);
+  }
+
+  @include mq($tablet) {
+    @include font-size(18px);
+  }
+}
+
+.icon {
+  width: rem(112);
+  height: rem(112);
+
+  @include mq($laptop) {
+    width: rem(96);
+    height: rem(96);
+  }
+
+  @include mq($tablet) {
+    width: rem(76);
+    height: rem(76);
+  }
+}

@@ -1,27 +1,38 @@
-import type { FC, PropsWithChildren } from "react";
+import type { FC, PropsWithChildren } from 'react';
 
-import { Outlet } from 'react-router-dom'
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-import Header from "./Header";
-import Footer from "./Footer";
+import { Outlet } from 'react-router-dom';
 
-import Loader from '@components/screens/Loader'
+import Header from './Header';
+import Footer from './Footer';
 
-import styles from './PageLayout.module.scss'
+import Loader from '@components/ui/Loader';
 
+import styles from './PageLayout.module.scss';
 
 const PageLayout: FC<PropsWithChildren> = ({ children }) => {
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
+
+  useEffect(() => {
+    if (!isHome) {
+      window.scrollTo(0, 0);
+    }
+  }, [isHome]);
+
   return (
     <div className={styles.page_layout}>
       <Loader />
       <Header />
       <div className={styles.page_content}>
         <Outlet />
-        { children }
+        {children}
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default PageLayout
+export default PageLayout;
