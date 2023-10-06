@@ -27,11 +27,10 @@
   height: 100%;
   padding: rem(60);
   transition: all 250ms ease-in-out;
-  transform: translateX(0);
   overflow: hidden scroll;
 
   &.show {
-    transform: translateX(rem(-385));
+    right: 0;
   }
 
   @include mq($mobile) {
@@ -45,10 +44,6 @@
   @include mq($tablet) {
     width: rem(281);
     right: rem(-281);
-
-    &.show {
-      transform: translateX(rem(-281));
-    }
   }
 }
 

@@ -45,7 +45,7 @@ const HeaderMenuPanel: FC<Props & PropsWithChildren> = ({ show = false, children
           </button>
         </div>
 
-        <div className={style['content_wrapper']} onClick={onClose}>
+        <div className={style['content-wrapper']} onClick={onClose}>
           {children}
         </div>
       </div>
