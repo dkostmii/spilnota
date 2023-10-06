@@ -24,7 +24,12 @@
     font-weight: 500;
   }
 
-  & p {
+  & ul {
+    list-style: inside;
+  }
+
+  & p,
+  & li {
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     line-height: 166.66%;
@@ -41,5 +46,14 @@
 
       font-weight: 500;
     }
+  }
+
+  & li:not(:last-child) {
+    padding-bottom: rem(16);
+  }
+
+  & a {
+    color: $accent;
+    text-decoration: underline;
   }
 }
