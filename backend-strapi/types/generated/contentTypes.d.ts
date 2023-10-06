@@ -818,6 +818,36 @@ export interface ApiPartnerPartner extends Schema.CollectionType {
   };
 }
 
+export interface ApiPresentationPresentation extends Schema.SingleType {
+  collectionName: 'presentations';
+  info: {
+    singularName: 'presentation';
+    pluralName: 'presentations';
+    displayName: 'Presentation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    becomePartner: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::presentation.presentation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::presentation.presentation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSocialSocial extends Schema.SingleType {
   collectionName: 'socials';
   info: {
@@ -970,6 +1000,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::news-article.news-article': ApiNewsArticleNewsArticle;
       'api::partner.partner': ApiPartnerPartner;
+      'api::presentation.presentation': ApiPresentationPresentation;
       'api::social.social': ApiSocialSocial;
       'api::support-category.support-category': ApiSupportCategorySupportCategory;
       'api::support-item.support-item': ApiSupportItemSupportItem;

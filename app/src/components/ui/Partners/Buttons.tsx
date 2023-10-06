@@ -1,7 +1,9 @@
 import type { FC } from 'react';
+
 import { useLocation } from 'react-router-dom';
 
-import { PrimaryButton, GhostButton } from '@components/ui/Buttons/CustomButton';
+import { GhostButton } from '@components/ui/Buttons/CustomButton';
+import BecomePartnerButton from './BecomePartnerButton';
 
 import styles from './Partners.module.scss';
 
@@ -17,9 +19,7 @@ const Buttons: FC = () => {
           Дивитись більше
         </GhostButton>
       )}
-      <PrimaryButton type="link" className={styles['become-partner-btn']}>
-        Стати партнером
-      </PrimaryButton>
+      <BecomePartnerButton />
     </div>
   );
 };

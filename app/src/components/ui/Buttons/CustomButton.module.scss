@@ -61,5 +61,9 @@
     &:target {
       filter: brightness(80%);
     }
+
+    &:disabled {
+      opacity: 0.4;
+    }
   }
 }

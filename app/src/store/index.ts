@@ -7,6 +7,7 @@ import { contactsApi } from './services/contacts';
 import { socialApi } from './services/social';
 import { bankDetailsApi } from './services/bankDetails';
 import { supportApi } from './services/support';
+import { presentationApi } from './services/presentation';
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
     [socialApi.reducerPath]: socialApi.reducer,
     [bankDetailsApi.reducerPath]: bankDetailsApi.reducer,
     [supportApi.reducerPath]: supportApi.reducer,
+    [presentationApi.reducerPath]: presentationApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
@@ -24,7 +26,8 @@ export const store = configureStore({
       .concat(contactsApi.middleware)
       .concat(socialApi.middleware)
       .concat(bankDetailsApi.middleware)
-      .concat(supportApi.middleware),
+      .concat(supportApi.middleware)
+      .concat(presentationApi.middleware),
 });
 
 setupListeners(store.dispatch);

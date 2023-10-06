@@ -1,0 +1,36 @@
+@import '@resources';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: rem(64);
+  min-height: rem(64);
+  width: 100%;
+
+  @include mq($laptop) {
+    min-width: rem(56);
+    min-height: rem(56);
+  }
+
+  @include mq($tablet) {
+    min-width: rem(48);
+    min-height: rem(48);
+  }
+
+  &_icon {
+    width: rem(56);
+    height: rem(56);
+
+    @include mq($laptop) {
+      width: rem(48);
+      height: rem(48);
+    }
+
+    @include mq($tablet) {
+      width: rem(36);
+      height: rem(36);
+    }
+  }
+}

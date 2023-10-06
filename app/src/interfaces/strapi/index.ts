@@ -31,8 +31,11 @@ export interface StrapiResponse<T> {
 
 export type StrapiImageFormat = 'small' | 'medium' | 'large';
 
-export type StrapiImage = {
+export type StrapiFile = {
   url: string;
+};
+
+export type StrapiImage = StrapiFile & {
   formats?: Record<StrapiImageFormat, Omit<StrapiImage, 'formats'>>;
 };
 
