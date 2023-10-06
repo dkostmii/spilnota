@@ -53,12 +53,17 @@ a {
 }
 
 body {
-    width: 100%;
-    overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .scroll-lock {
   overflow: hidden;
   max-height: 100vh;
   overscroll-behavior: none;
+}
+
+::selection {
+  color: $variant;
+  background-color: $accent;
 }
