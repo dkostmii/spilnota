@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "socials",
+  "info": {
+    "singularName": "social",
+    "pluralName": "socials",
+    "displayName": "Social"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "instagramUrl": {
+      "type": "string",
+      "required": true,
+      "regex": "^https?:\\/\\/.*$",
+      "maxLength": 120
+    },
+    "facebookUrl": {
+      "type": "string",
+      "required": true,
+      "regex": "^https?:\\/\\/.*$",
+      "maxLength": 120
+    },
+    "telegramUrl": {
+      "type": "string",
+      "required": true,
+      "regex": "^https?:\\/\\/.*$",
+      "maxLength": 120
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "bank_details",
+  "info": {
+    "singularName": "bank-detail",
+    "pluralName": "bank-details",
+    "displayName": "BankDetails"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150
+    },
+    "organizationCode": {
+      "type": "string",
+      "required": true,
+      "regex": "^[0-9]{8}$"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "bankAccount": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

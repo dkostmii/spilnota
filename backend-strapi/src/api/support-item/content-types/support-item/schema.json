@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "support_items",
+  "info": {
+    "singularName": "support-item",
+    "pluralName": "support-items",
+    "displayName": "SupportItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 120
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "regex": "^https?:\\/\\/.*$",
+      "maxLength": 120
+    },
+    "support_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::support-category.support-category",
+      "inversedBy": "support_items"
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

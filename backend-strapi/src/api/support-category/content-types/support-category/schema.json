@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "support_categories",
+  "info": {
+    "singularName": "support-category",
+    "pluralName": "support-categories",
+    "displayName": "SupportCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 120
+    },
+    "support_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::support-item.support-item",
+      "mappedBy": "support_category"
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

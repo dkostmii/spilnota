@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contacts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phone": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\+?[0-9]{7,16}$"
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "regex": "^.+@.+(\\..+)*$"
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
