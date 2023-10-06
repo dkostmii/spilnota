@@ -2,11 +2,9 @@
 
 .wrapper {
   display: flex;
-  width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
 
   &:not(.show) {
     display: none;
@@ -30,7 +28,7 @@
   padding: rem(60);
   transition: all 250ms ease-in-out;
   transform: translateX(0);
-  overflow-y: scroll;
+  overflow: hidden scroll;
 
   &.show {
     transform: translateX(rem(-385));
