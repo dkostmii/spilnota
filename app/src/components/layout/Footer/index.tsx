@@ -13,7 +13,7 @@ import style from './Footer.module.scss';
 const Footer: FC = () => {
   const { pathname } = useLocation();
 
-  const links = [
+  let links = [
     {
       title: 'Про нас',
       href: '#AboutUs',
@@ -35,8 +35,12 @@ const Footer: FC = () => {
   const isHome = pathname === '/';
 
   if (!isHome) {
-    links.forEach((l) => {
-      l.href = `/${l.href}`;
+    links = links.map((l) => {
+      if (l.href.startsWith('/')) {
+        return l;
+      }
+
+      return { ...l, href: `/${l.href}` };
     });
   }
 

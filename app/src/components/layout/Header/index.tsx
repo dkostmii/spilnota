@@ -29,29 +29,6 @@ import style from './Header.module.scss';
 
 const desktopHeaderBreakpoint = breakpoints.laptop;
 
-const links = [
-  {
-    title: 'Про нас',
-    href: '#AboutUs',
-  },
-  {
-    title: 'Концепція',
-    href: '#Concept',
-  },
-  {
-    title: 'Новини',
-    href: '#News',
-  },
-  {
-    title: 'Партнери',
-    href: '#Partners',
-  },
-  {
-    title: 'Контакти',
-    href: '#Contacts',
-  },
-];
-
 const Header: FC = () => {
   const scrollPosition = useWindowPosition();
   const { width } = useWindowSize(config.resizeDebounceTimeMs);
@@ -68,9 +45,36 @@ const Header: FC = () => {
     }
   }, [showMenu, width]);
 
+  let links = [
+    {
+      title: 'Про нас',
+      href: '#AboutUs',
+    },
+    {
+      title: 'Концепція',
+      href: '#Concept',
+    },
+    {
+      title: 'Новини',
+      href: '#News',
+    },
+    {
+      title: 'Партнери',
+      href: '#Partners',
+    },
+    {
+      title: 'Контакти',
+      href: '#Contacts',
+    },
+  ];
+
   if (!isHome) {
-    links.forEach((l) => {
-      l.href = `/${l.href}`;
+    links = links.map((l) => {
+      if (l.href.startsWith('/')) {
+        return l;
+      }
+
+      return { ...l, href: `/${l.href}` };
     });
   }
 
