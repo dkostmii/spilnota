@@ -17,7 +17,7 @@ const Item: FC<Props> = ({ data }) => {
 
   return (
     <li className={styles['partners-element']}>
-      <a href={data.url}>
+      <a href={data.url} title={data.name}>
         <img className="img-container" src={imgUrl} alt="" />
       </a>
     </li>

@@ -33,7 +33,7 @@ const Partners: FC = () => {
       ) : (
         <div className={style.container}>
           <PartnersList data={data} />
-          <PartnersButtons />
+          <PartnersButtons showMorePartnersLink />
         </div>
       )}
     </Section>

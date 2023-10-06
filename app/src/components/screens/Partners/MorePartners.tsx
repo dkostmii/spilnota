@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
 import PartnersList from '@components/ui/Partners/List';
+import PartnersButtons from '@components/ui/Partners/Buttons';
 import InlineLoader from '@components/ui/Loader/InlineLoader';
 
 import { useGetPartnersQuery } from '@store/services/partners';
@@ -13,11 +14,7 @@ const MorePartners: FC = () => {
 
   const { data, error, isLoading } = useGetPartnersQuery();
 
-  if (error) {
-    throw new Error('Unable to load data');
-  }
-
-  if (!data) {
+  if (error || !(isLoading || error || data)) {
     throw new Error('Unable to load data');
   }
 
@@ -26,6 +23,7 @@ const MorePartners: FC = () => {
       <div className={styles.container}>
         <h2 className="section-title">Партнери</h2>
         {isLoading ? <InlineLoader /> : <PartnersList displayAll data={data} />}
+        <PartnersButtons />
       </div>
     </section>
   );
